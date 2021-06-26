@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    }
+    ul>li>img{
+        width:10%;
+    }
+    nav{
+        background-color:#0b0d20;
+    }
+    ul{
+        display:flex;
+        flex-direction: row;
+    }
+    ul>li{
+        list-style:none;
+        margin:1%;
+        padding:0.1%;
+    }
+    li>a{
+        position:relative;
+        top:5%;
+        text-decoration:none;
+        color: white;
+    }
+    li>a:hover{
+        color: palevioletred;
+        font-size: 110%;
+    }
+    div{
+        max-width:30%;
+        margin:auto;
+        padding:1%;
+    }
+    form{
+        max-width:30%;
+        margin:auto;
+        margin-top:3%;
+        border-radius: 4%;
+        background-color: palevioletred;
+    }
+    input{
+        margin: 1%;
+        padding:1%;
+        border-radius: 10%;
+    }
+    button{
+        border-radius:15%;
+        padding:5%;
+        background-color: #0b0d20;
+        color: white;
+    }
+    button:hover{
+        color:palevioletred;
+    
+    }
