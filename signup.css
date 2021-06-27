@@ -1,55 +1,131 @@
 *{
-margin:0;
-}
-ul>li>img{
-    width:10%;
-}
-nav{
-    background-color:#0b0d20;
-}
-ul{
-    display:flex;
-    flex-direction: row;
-}
-ul>li{
-    list-style:none;
-    margin:1%;
-    padding:0.1%;
-}
-li>a{
-    position:relative;
-    top:5%;
-    text-decoration:none;
-    color: white;
-}
-li>a:hover{
-    color: palevioletred;
-    font-size: 110%;
-}
-div{
-    max-width:30%;
-    margin:auto;
-    padding:1%;
-}
-form{
-    max-width:30%;
-    margin:auto;
-    margin-top:3%;
-    border-radius: 4%;
-    background-color: palevioletred;
-}
-input{
-    margin: 1%;
-    padding:1%;
-    border-radius: 10%;
-}
-button{
-    border-radius:15%;
-    padding:5%;
-    background-color: #0b0d20;
-    color: white;
-}
-button:hover{
-    color:palevioletred;
-
-}
+    margin:0;
+    }
+    ul>li>img{
+        width:10%;
+    }
+    nav{
+        background-color:#011530;
+    }
+    ul{
+        display:flex;
+        flex-direction: row;
+    }
+    footer>div>ul{
+        display:flex;
+        flex-direction: column;
+    }
+    ul>li{
+        list-style:none;
+        margin:1%;
+        padding:0.1%;
+    }
+    li{
+        color: palevioletred;
+    }
+    li>h1{
+        margin-top:2%;
+    }
+    li>a{
+        position:relative;
+        top:5%;
+        text-decoration:none;
+        color: white;
+    }
+    li>a:hover{
+        color: palevioletred;
+        font-size: 110%;
+    }
+    section{
+        display: grid;
+        grid-template-areas: 
+        'container form'
+        ;
+    }
+    #container{
+        grid-area: container;
+        max-width:60%;
+        margin-left:30%;
+        padding:1%;
+        text-align:center;
+    }
+    section{
+        margin:10%;
+    }
+    form>div{
+        max-width:30%;
+        margin:auto;
+        padding:1%;
+    }
+    #container>h1{
+        font-size:200%;
+        color: palevioletred;
+    }
+    #container>h2{
+        color: palevioletred;
+    }
+    #container>p{
+        color: rgb(66, 114, 219);
+        text-align: justify;
+    }
+    form{
+        max-width:90%;
+        margin:auto;
+        margin-top:20%;
+        margin-right: 3%;
+        padding: 3%;
+        padding-right:10%;
+        border-radius: 1%;
+        background-color: #011530;
+        grid-area: form;
+        height: 100%;
+        width: 80%;
+        color: white
+    }
+    input{
+        /* margin: 1%; */
+        padding:1%;
+        border-radius: 10%;
+        max-width: 300%;
+    }
+    button{
+        border-radius:15%;
+        padding:5%;
+        background-color: #ffffff;
+        color: #011530;
+    }
+    button:hover{
+        color:palevioletred;
+        
+    }
+    footer{
+        background-color:black;
+        display: grid;
+        grid-template-areas: 
+        'about pages contact social'
+        ;
+    }
+    #about{
+        grid-area:about;
+        
+    }
+    #pages{
+        grid-area:pages;
+    }
+    #contact{
+        grid-area:contact;
+    }
+    #social{
+        grid-area:social;
+    }
+    #pollgram>img{
+        max-width: 10%;
+    }
+    h3{
+        color: white;
+    }
+    footer>div>p{
+        color: white;
+        text-align: left;
+        max-width: 50%;
+    }
