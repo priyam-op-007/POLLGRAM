@@ -19,3 +19,5 @@ Our Motto
 > To provide simple and better platform for people with goals.
 
 Link for our video 
+
+https://youtu.be/9MZ59-BzXUY
