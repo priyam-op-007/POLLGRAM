@@ -1,0 +1,669 @@
+<html>
+<head>
+    <script type="text/javascript">
+    
+    var buttons1, buttons2, buttons3, buttons4, buttons5, buttons6, buttons7, buttons8, buttons9, buttons10;
+            function pageLoaded()
+    {
+        
+         buttons1 = document.querySelectorAll(".choice1 button");
+         
+        tally1 = {
+            1: 5,
+            2: 8,
+            3: 6,
+            total: 19
+        };
+        buttons2 = document.querySelectorAll(".choice2 button");
+        tally2 = {
+            1: 7,
+            2: 5,
+            3: 7,
+            total: 19
+        };
+        buttons3 = document.querySelectorAll(".choice3 button");
+        tally3 = {
+            1: 6,
+            2: 6,
+            3: 7,
+            total: 19
+        };
+        buttons4 = document.querySelectorAll(".choice4 button");
+        tally4 = {
+            1: 5,
+            2: 8,
+            3: 6,
+            total: 19
+        };
+        buttons5 = document.querySelectorAll(".choice5 button");
+        tally5 = {
+            1: 3,
+            2: 9,
+            3: 7,
+            total: 19
+        };
+        buttons6 = document.querySelectorAll(".choice6 button");
+        tally6 = {
+            1: 9,
+            2: 4,
+            3: 6,
+            total: 19
+        };
+        buttons7 = document.querySelectorAll(".choice7 button");
+        tally7 = {
+            1: 8,
+            2: 7,
+            3: 4,
+            total: 19
+        };
+        buttons8 = document.querySelectorAll(".choice8 button");
+        tally8 = {
+            1: 7,
+            2: 5,
+            3: 7,
+            total: 19
+        };
+        buttons9 = document.querySelectorAll(".choice9 button");
+        tally9 = {
+            1: 9,
+            2: 5,
+            3: 5,
+            total: 19
+        };
+        buttons10 = document.querySelectorAll(".choice10 button");
+        tally10 = {
+            1: 5,
+            2: 6,
+            3: 8,
+            total: 19
+        };
+        //alert("calling setup");
+        setup();
+    }
+    
+    function vote1(choice) {
+        tally1[choice]++;
+        tally1["total"]++;
+        buttons1[choice-1].style.backgroundImage = "linear-gradient(to right, #f5b0ee , white)";
+        for (var i = 0; i < buttons1.length; i++) {
+            //buttons[i].style.opacity = 0.65;
+            buttons1[i].style.cursor = "not-allowed";
+            buttons1[i].disabled = "true";
+        }
+        var spans1 = document.querySelectorAll(".percentage1");
+        var bars1 = document.getElementsByClassName("bar1");
+        for(var i=0; i<spans1.length; i++)
+        {
+            var percentage1 = barPercentage(bars1[i], tally1);
+            spans1[i].innerHTML = percentage1.toString() + "%";
+        }
+        //alert(tally);
+    }
+    function vote2(choice) {
+        
+
+        tally2[choice]++;
+        tally2["total"]++;
+        buttons2[choice-1].style.backgroundImage = "linear-gradient(to right, #f5b0ee , white)";
+        for (var i = 0; i < buttons2.length; i++) {
+            //buttons[i].style.opacity = 0.65;
+            buttons2[i].style.cursor = "not-allowed";
+            buttons2[i].disabled = "true";
+        }
+        var spans2 = document.querySelectorAll(".percentage2");
+        var bars2 = document.getElementsByClassName("bar2");
+        for(var i=0; i<spans2.length; i++)
+        {
+            var percentage2 = barPercentage(bars2[i], tally2);
+            spans2[i].innerHTML = percentage2.toString() + "%";
+        }
+        //alert(tally);
+    }
+
+    function vote3(choice) {
+        
+
+        tally3[choice]++;
+        tally3["total"]++;
+        buttons3[choice-1].style.backgroundImage = "linear-gradient(to right, #f5b0ee , white)";
+        for (var i = 0; i < buttons3.length; i++) {
+            //buttons[i].style.opacity = 0.65;
+            buttons3[i].style.cursor = "not-allowed";
+            buttons3[i].disabled = "true";
+        }
+        var spans3 = document.querySelectorAll(".percentage3");
+        var bars3 = document.getElementsByClassName("bar3");
+        for(var i=0; i<spans3.length; i++)
+        {
+            var percentage3 = barPercentage(bars3[i], tally3);
+            spans3[i].innerHTML = percentage3.toString() + "%";
+        }
+        //alert(tally);
+    }
+
+    function vote4(choice) {
+        
+
+        tally4[choice]++;
+        tally4["total"]++;
+        buttons4[choice-1].style.backgroundImage = "linear-gradient(to right, #f5b0ee , white)";
+        for (var i = 0; i < buttons4.length; i++) {
+            //buttons[i].style.opacity = 0.65;
+            buttons4[i].style.cursor = "not-allowed";
+            buttons4[i].disabled = "true";
+        }
+        var spans4 = document.querySelectorAll(".percentage4");
+        var bars4 = document.getElementsByClassName("bar4");
+        for(var i=0; i<spans4.length; i++)
+        {
+            var percentage4 = barPercentage(bars4[i], tally4);
+            spans4[i].innerHTML = percentage4.toString() + "%";
+        }
+        //alert(tally);
+    }
+
+    function vote5(choice) {
+        
+
+        tally5[choice]++;
+        tally5["total"]++;
+        buttons5[choice-1].style.backgroundImage = "linear-gradient(to right, #f5b0ee , white)";
+        for (var i = 0; i < buttons5.length; i++) {
+            //buttons[i].style.opacity = 0.65;
+            buttons5[i].style.cursor = "not-allowed";
+            buttons5[i].disabled = "true";
+        }
+        var spans5 = document.querySelectorAll(".percentage5");
+        var bars5 = document.getElementsByClassName("bar5");
+        for(var i=0; i<spans5.length; i++)
+        {
+            var percentage5 = barPercentage(bars5[i], tally5);
+            spans5[i].innerHTML = percentage5.toString() + "%";
+        }
+        //alert(tally);
+    }
+
+    function vote6(choice) {
+        
+
+        tally6[choice]++;
+        tally6["total"]++;
+        buttons6[choice-1].style.backgroundImage = "linear-gradient(to right, #f5b0ee , white)";
+        for (var i = 0; i < buttons6.length; i++) {
+            //buttons[i].style.opacity = 0.65;
+            buttons6[i].style.cursor = "not-allowed";
+            buttons6[i].disabled = "true";
+        }
+        var spans6 = document.querySelectorAll(".percentage6");
+        var bars6 = document.getElementsByClassName("bar6");
+        for(var i=0; i<spans6.length; i++)
+        {
+            var percentage6 = barPercentage(bars6[i], tally6);
+            spans6[i].innerHTML = percentage6.toString() + "%";
+        }
+        //alert(tally);
+    }
+
+    function vote7(choice) {
+        
+
+        tally7[choice]++;
+        tally7["total"]++;
+        buttons7[choice-1].style.backgroundImage = "linear-gradient(to right, #f5b0ee , white)";
+        for (var i = 0; i < buttons7.length; i++) {
+            //buttons[i].style.opacity = 0.65;
+            buttons7[i].style.cursor = "not-allowed";
+            buttons7[i].disabled = "true";
+        }
+        var spans7 = document.querySelectorAll(".percentage7");
+        var bars7 = document.getElementsByClassName("bar7");
+        for(var i=0; i<spans7.length; i++)
+        {
+            var percentage7 = barPercentage(bars7[i], tally7);
+            spans7[i].innerHTML = percentage7.toString() + "%";
+        }
+        //alert(tally);
+    }
+
+    function vote8(choice) {
+        
+
+        tally8[choice]++;
+        tally8["total"]++;
+        buttons8[choice-1].style.backgroundImage = "linear-gradient(to right, #f5b0ee , white)";
+        for (var i = 0; i < buttons8.length; i++) {
+            //buttons[i].style.opacity = 0.65;
+            buttons8[i].style.cursor = "not-allowed";
+            buttons8[i].disabled = "true";
+        }
+        var spans8 = document.querySelectorAll(".percentage8");
+        var bars8 = document.getElementsByClassName("bar8");
+        for(var i=0; i<spans8.length; i++)
+        {
+            var percentage8 = barPercentage(bars8[i], tally8);
+            spans8[i].innerHTML = percentage8.toString() + "%";
+        }
+        //alert(tally);
+    }
+
+    function vote9(choice) {
+        
+
+        tally9[choice]++;
+        tally9["total"]++;
+        buttons9[choice-1].style.backgroundImage = "linear-gradient(to right, #f5b0ee , white)";
+        for (var i = 0; i < buttons9.length; i++) {
+            //buttons[i].style.opacity = 0.65;
+            buttons9[i].style.cursor = "not-allowed";
+            buttons9[i].disabled = "true";
+        }
+        var spans9 = document.querySelectorAll(".percentage9");
+        var bars9 = document.getElementsByClassName("bar9");
+        for(var i=0; i<spans9.length; i++)
+        {
+            var percentage9 = barPercentage(bars9[i], tally9);
+            spans9[i].innerHTML = percentage9.toString() + "%";
+        }
+        //alert(tally);
+    }
+
+    function vote10(choice) {
+        
+
+        tally10[choice]++;
+        tally10["total"]++;
+        buttons10[choice-1].style.backgroundImage = "linear-gradient(to right, #f5b0ee , white)";
+        for (var i = 0; i < buttons10.length; i++) {
+            //buttons[i].style.opacity = 0.65;
+            buttons10[i].style.cursor = "not-allowed";
+            buttons10[i].disabled = "true";
+        }
+        var spans10 = document.querySelectorAll(".percentage10");
+        var bars10 = document.getElementsByClassName("bar10");
+        for(var i=0; i<spans10.length; i++)
+        {
+            var percentage10 = barPercentage(bars10[i], tally10);
+            spans10[i].innerHTML = percentage10.toString() + "%";
+        }
+        //alert(tally);
+    }
+
+    function barPercentage(node, tally) {
+        var choice = node.dataset.choice;
+  
+        if (tally[choice])
+            return tally[choice]/tally["total"] * 100;
+        return 0;
+    }
+
+    function renderBars() {
+        //alert("inside renderbars");
+        var bars1 = document.getElementsByClassName("bar1");
+  
+        for (var i = 0; i < bars1.length; i++) {
+            var percentage1 = barPercentage(bars1[i], tally1);
+            console.log(percentage1);
+            bars1[i].style.width = percentage1.toString() + "%";
+        }
+         var bars2 = document.getElementsByClassName("bar2");
+  
+        for (var i = 0; i < bars2.length; i++) {
+            var percentage2 = barPercentage(bars2[i], tally2);
+            console.log(percentage2);
+            bars2[i].style.width = percentage2.toString() + "%";
+        }
+        var bars3 = document.getElementsByClassName("bar3");
+  
+        for (var i = 0; i < bars3.length; i++) {
+            var percentage3 = barPercentage(bars3[i], tally3);
+            console.log(percentage2);
+            bars3[i].style.width = percentage3.toString() + "%";
+        }
+        var bars4 = document.getElementsByClassName("bar4");
+  
+        for (var i = 0; i < bars4.length; i++) {
+            var percentage4 = barPercentage(bars4[i], tally4);
+            console.log(percentage2);
+            bars4[i].style.width = percentage4.toString() + "%";
+        }
+        var bars5 = document.getElementsByClassName("bar5");
+  
+        for (var i = 0; i < bars5.length; i++) {
+            var percentage5 = barPercentage(bars5[i], tally5);
+            console.log(percentage2);
+            bars5[i].style.width = percentage5.toString() + "%";
+        }
+        var bars6 = document.getElementsByClassName("bar6");
+  
+        for (var i = 0; i < bars6.length; i++) {
+            var percentage6 = barPercentage(bars6[i], tally6);
+            console.log(percentage2);
+            bars6[i].style.width = percentage6.toString() + "%";
+        }
+        var bars7 = document.getElementsByClassName("bar7");
+  
+        for (var i = 0; i < bars7.length; i++) {
+            var percentage7 = barPercentage(bars7[i], tally7);
+            console.log(percentage2);
+            bars7[i].style.width = percentage7.toString() + "%";
+        }
+        var bars8 = document.getElementsByClassName("bar8");
+  
+        for (var i = 0; i < bars8.length; i++) {
+            var percentage8 = barPercentage(bars8[i], tally8);
+            console.log(percentage2);
+            bars8[i].style.width = percentage8.toString() + "%";
+        }
+        var bars9 = document.getElementsByClassName("bar9");
+  
+        for (var i = 0; i < bars9.length; i++) {
+            var percentage9 = barPercentage(bars9[i], tally9);
+            console.log(percentage2);
+            bars9[i].style.width = percentage9.toString() + "%";
+        }
+        var bars10 = document.getElementsByClassName("bar10");
+  
+        for (var i = 0; i < bars10.length; i++) {
+            var percentage10 = barPercentage(bars10[i], tally10);
+            console.log(percentage2);
+            bars10[i].style.width = percentage10.toString() + "%";
+        }
+        
+        
+
+    }
+
+    function setup() {
+        // Set up event listeners
+        //alert("inside setup");
+        //alert(buttons.length);
+        for (var i = 0; i < buttons1.length; i++) {
+            buttons1[i].addEventListener("click", function(e) {
+                vote1(e.target.dataset["choice"]);
+                renderBars();
+            });
+        }
+        for (var i = 0; i < buttons2.length; i++) {
+            buttons2[i].addEventListener("click", function(e) {
+                vote2(e.target.dataset["choice"]);
+                renderBars();
+            });
+        }
+        for (var i = 0; i < buttons3.length; i++) {
+            buttons3[i].addEventListener("click", function(e) {
+                vote3(e.target.dataset["choice"]);
+                renderBars();
+            });
+        }
+        for (var i = 0; i < buttons4.length; i++) {
+            buttons4[i].addEventListener("click", function(e) {
+                vote4(e.target.dataset["choice"]);
+                renderBars();
+            });
+        }
+        for (var i = 0; i < buttons5.length; i++) {
+            buttons5[i].addEventListener("click", function(e) {
+                vote5(e.target.dataset["choice"]);
+                renderBars();
+            });
+        }
+        for (var i = 0; i < buttons6.length; i++) {
+            buttons6[i].addEventListener("click", function(e) {
+                vote6(e.target.dataset["choice"]);
+                renderBars();
+            });
+        }
+        for (var i = 0; i < buttons7.length; i++) {
+            buttons7[i].addEventListener("click", function(e) {
+                vote7(e.target.dataset["choice"]);
+                renderBars();
+            });
+        }
+        for (var i = 0; i < buttons8.length; i++) {
+            buttons8[i].addEventListener("click", function(e) {
+                vote8(e.target.dataset["choice"]);
+                renderBars();
+            });
+        }
+        for (var i = 0; i < buttons9.length; i++) {
+            buttons9[i].addEventListener("click", function(e) {
+                vote9(e.target.dataset["choice"]);
+                renderBars();
+            });
+        }
+        for (var i = 0; i < buttons10.length; i++) {
+            buttons10[i].addEventListener("click", function(e) {
+                vote10(e.target.dataset["choice"]);
+                renderBars();
+            });
+        }
+        renderBars();
+        
+    }
+
+
+    </script>
+    <style type = "text/css">
+        .choice {
+            display: inline;
+            width: 50%;
+            align:left;
+        }
+
+        .result {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            height:90px;
+            align:left;
+        }
+
+        .bar .bar1 .bar2 .bar3 .bar4 .bar5 .bar6 .bar7 .bar8 .bar9 .bar10{
+            height: 100%;
+            width: 20%;
+            /* margin: 0 auto; */
+            align:left;
+            font: bold 15px Georgia, serif;
+            color:black;
+            /*background-image: linear-gradient(to right, #b0d9f5 , white);*/
+        }
+        .collapsible {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: 1px solid black;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .active, .collapsible:hover {
+            background-color: palevioletred;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            width:100%;
+        }
+
+        .bar1[data-choice="1"], .bar2[data-choice="1"], .bar3[data-choice="1"], .bar4[data-choice="1"], .bar5[data-choice="1"], .bar6[data-choice="1"], .bar7[data-choice="1"], .bar8[data-choice="1"], .bar9[data-choice="1"], .bar10[data-choice="1"]{
+            background-image: linear-gradient(to right, #b0d9f5 , white);
+        }
+
+        .bar1[data-choice="2"], .bar2[data-choice="2"], .bar3[data-choice="2"], .bar4[data-choice="2"], .bar7[data-choice="2"], .bar5[data-choice="2"], .bar6[data-choice="2"], .bar8[data-choice="2"], .bar9[data-choice="2"], .bar10[data-choice="2"]{
+            background-image: linear-gradient(to right, #b0d9f5 , white);
+        }
+
+        .bar1[data-choice="3"], .bar2[data-choice="3"], .bar3[data-choice="3"], .bar4[data-choice="3"], .bar5[data-choice="3"], .bar6[data-choice="3"], .bar7[data-choice="3"], .bar8[data-choice="3"], .bar9[data-choice="3"], .bar10[data-choice="3"]{
+            background-image: linear-gradient(to right, #b0d9f5 , white);
+        }
+        .percentage .percentage1 .percentage2 .percentage10 .percentage9 .percentage8 .percentage7 .percentage6 .percentage5 .percentage4 {
+            display: inline;
+            align:justify;
+        }
+        /*@media (max-width: 800px) {
+            .flex-container {
+            flex-direction: row;
+  }*/
+}
+    </style>
+</head>
+<body onload="pageLoaded()" style="align:left;">
+    <h1 align="center">Ongoing Polls</h1>
+    <button type="button" class="collapsible" title="Click to cast your vote">
+        <h3>Is India handling Covid-19 well?</h3>
+    </button>
+    <div class="content">
+        <div class="choice1 choice" style="width=25%;">
+            <div class="result">
+                <div style="border:1px solid black; width:20%;"><button class="bar1" data-choice="1">Yes</button><label class="percentage1"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar1" data-choice="2">No</button><label class="percentage1"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar1" data-choice="3">Can't say</button><label class="percentage1"></label></div><br/>
+            </div>
+         
+        </div>
+    </div>
+    <button type="button" class="collapsible" title="Click to cast your vote">
+        <h3>Is the current rate of vaccination in India good enough?</h3>
+    </button>
+    <div class="content">
+        <div class="choice2" style="width=25%;">
+            <div class="result">
+                <div style="border:1px solid black; width:20%;"><button class="bar2" data-choice="1">Yes</button><label class="percentage2"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar2" data-choice="2">No</button><label class="percentage2"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar2" data-choice="3">Can't say</button><label class="percentage2"></label></div><br/>
+            </div>
+         
+        </div>
+    </div>
+    <button type="button" class="collapsible" title="Click to cast your vote">
+        <h3>Should there be a second thought on Virat's captaincy after the defeat in WTC Final?</h3>
+    </button>
+    <div class="content">
+        <div class="choice3" style="width=25%;">
+            <div class="result">
+                <div style="border:1px solid black; width:20%;"><button class="bar3" data-choice="1">Yes</button><label class="percentage3"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar3" data-choice="2">No</button><label class="percentage3"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar3" data-choice="3">Can't say</button><label class="percentage3"></label></div><br/>
+            </div>
+         
+        </div>
+    </div>
+    <button type="button" class="collapsible" title="Click to cast your vote">
+        <h3>Will the opposition be united after Sharad Pawar's initiative?</h3>
+    </button>
+    <div class="content">
+        <div class="choice4" style="width=25%;">
+            <div class="result">
+                <div style="border:1px solid black; width:20%;"><button class="bar4" data-choice="1">Yes</button><label class="percentage4"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar4" data-choice="2">No</button><label class="percentage4"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar4" data-choice="3">Can't say</button><label class="percentage4"></label></div><br/>
+            </div>
+         
+        </div>
+    </div>
+    <button type="button" class="collapsible" title="Click to cast your vote">
+        <h3>Should the way for assembly elections be cleared in Jammu and Kashmir?
+
+</h3>
+    </button>
+    <div class="content">
+        <div class="choice5" style="width=25%;">
+            <div class="result">
+                <div style="border:1px solid black; width:20%;"><button class="bar5" data-choice="1">Yes</button><label class="percentage5"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar5" data-choice="2">No</button><label class="percentage5"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar5" data-choice="3">Can't say</button><label class="percentage5"></label></div><br/>
+            </div>
+         
+        </div>
+    </div>
+    <button type="button" class="collapsible" title="Click to cast your vote">
+        <h3>Should those with more than 2 children be denied government schemes?</h3>
+    </button>
+    <div class="content">
+        <div class="choice6" style="width=25%;">
+            <div class="result">
+                <div style="border:1px solid black; width:20%;"><button class="bar6" data-choice="1">Yes</button><label class="percentage6"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar6" data-choice="2">No</button><label class="percentage6"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar6" data-choice="3">Can't say</button><label class="percentage6"></label></div><br/>
+            </div>
+         
+        </div>
+    </div>
+    <button type="button" class="collapsible" title="Click to cast your vote">
+        <h3>Did the parliamentary committee rightly reprimand Twitter?</h3>
+    </button>
+    <div class="content">
+        <div class="choice7" style="width=25%;">
+            <div class="result">
+                <div style="border:1px solid black; width:20%;"><button class="bar7" data-choice="1">Yes</button><label class="percentage7"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar7" data-choice="2">No</button><label class="percentage7"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar7" data-choice="3">Can't say</button><label class="percentage7"></label></div><br/>
+            </div>
+         
+        </div>
+    </div>
+    <button type="button" class="collapsible" title="Click to cast your vote">
+        <h3>Are Baba Ramdev's objections on the attitude of the IMA correct?</h3>
+    </button>
+    <div class="content">
+        <div class="choice8" style="width=25%;">
+            <div class="result">
+                <div style="border:1px solid black; width:20%;"><button class="bar8" data-choice="1">Yes</button><label class="percentage8"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar8" data-choice="2">No</button><label class="percentage8"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar8" data-choice="3">Can't say</button><label class="percentage8"></label></div><br/>
+            </div>
+         
+        </div>
+    </div>
+    <button type="button" class="collapsible" title="Click to cast your vote">
+        <h3>Is the anti-agriculture law movement becoming infamous?</h3>
+    </button>
+    <div class="content">
+        <div class="choice9" style="width=25%;">
+            <div class="result">
+                <div style="border:1px solid black; width:20%;"><button class="bar9" data-choice="1">Yes</button><label class="percentage9"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar9" data-choice="2">No</button><label class="percentage9"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar9" data-choice="3">Can't say</button><label class="percentage9"></label></div><br/>
+            </div>
+         
+        </div>
+    </div>
+    <button type="button" class="collapsible" title="Click to cast your vote">
+        <h3>Has the central government failed to act against the political violence in Bengal?</h3>
+    </button>
+    <div class="content">
+        <div class="choice10" style="width=25%;">
+            <div class="result">
+                <div style="border:1px solid black; width:20%;"><button class="bar10" data-choice="1">Yes</button><label class="percentage10"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar10" data-choice="2">No</button><label class="percentage10"></label></div><br/>
+                <div style="border:1px solid black; width:20%;"><button class="bar10" data-choice="3">Can't say</button><label class="percentage10"></label></div><br/>
+            </div>
+         
+        </div>
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+
+var count;
+
+for (count = 0; count < coll.length; count++) {
+  coll[count].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } 
+        else {
+            content.style.display = "block";
+        }
+    });
+}
+    </script>
+</body>
+</html>
