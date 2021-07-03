@@ -18,6 +18,5 @@
 Our Motto
 > To provide simple and better platform for people with goals.
 
-Link for our video [Link](https://youtu.be/9MZ59-BzXUY)
 
 The link for our website is: [Website Link](https://priyam-op-007.github.io/SMC-T-3-HTM-2.0/signup.html)
