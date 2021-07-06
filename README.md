@@ -21,4 +21,4 @@ Our Motto
 
 The link for our website is: [Website Link](https://priyam-op-007.github.io/SMC-T-3-HTM-2.0/signup.html)
 
-Here is the link for the video -
+Here is the link for the video - [Video Link](https://youtu.be/9MZ59-BzXUY)
